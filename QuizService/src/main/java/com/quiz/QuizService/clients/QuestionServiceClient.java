@@ -11,7 +11,7 @@ import java.util.List;
 //@FeignClient(url = "http://localhost:8082", value = "Question-Client")  not using loadbalancer
 
 // using loadbalancer
-@FeignClient(name = "QUESTIONSERVICE")
+@FeignClient(name = "QUESTION-SERVICE")
 public interface QuestionServiceClient {
     @GetMapping("/questions/quiz/{quizId}")
     List<Question> getQuestionsOfQuiz(@PathVariable Long quizId);
